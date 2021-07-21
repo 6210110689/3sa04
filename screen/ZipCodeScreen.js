@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { FlatList, Text, View, StyleSheet, TouchableHighlight } from 'react-native'
+import { FlatList, Text, View, StyleSheet, TouchableHighlight,} from 'react-native'
 
 const availableZipItems = [
     { place: 'Hatyai', code: '90110' },
@@ -16,6 +16,7 @@ const availableZipItems = [
    ]
 
 const ZipItem = ({place, code, navigation}) => (
+
     <TouchableHighlight onPress={() => navigation.navigate('Weather', { zipCode: code})}>
         <View style={styles.zipItem}>
             <Text style={styles.zipPlace}>{place}</Text>
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: 25,
+        backgroundColor: 'rgba(135, 206, 250, 0.5)',
     },
     zipPlace: {
         flex: 1,
@@ -49,5 +51,5 @@ const styles = StyleSheet.create({
     zipCode: {
         flex: 1,
         
-    }
+    },
 })
