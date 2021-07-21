@@ -7,6 +7,7 @@ export default function Forecast(props){
             <Text style={styles.big}>{props.city}</Text>
             <Text style={styles.big}>{props.main}</Text>
             <Text>{props.description}</Text>
+            <Text>Wind Speed {props.wind}</Text>
             <Text style={{alignItems: 'center',fontSize: 30,}}>{props.temp} °C</Text>
         </View>
     )

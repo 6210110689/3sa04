@@ -8,7 +8,8 @@ export default function Weather(props) {
         main: 'Main',
         description: 'description',
         temp: 0,
-        city: '-'
+        city: '-',
+        wind: 0,
     })
 
     useEffect(() => {
@@ -21,7 +22,8 @@ export default function Weather(props) {
                     main: json.weather[0].main,
                     description: json.weather[0].description,
                     temp: json.main.temp,
-                    city: json.name 
+                    city: json.name,
+                    wind: json.wind.speed
                 });
             })
             .catch((error) => {
